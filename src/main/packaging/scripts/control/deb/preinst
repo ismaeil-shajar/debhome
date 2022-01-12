@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if ! getent group debuser >/dev/null; then
+    addgroup --system debuser
+fi
+
+if ! getent passwd debuser >/dev/null; then
+    adduser --quiet \
+            --system \
+            --ingroup debuser \
+            --quiet \
+            --disabled-login \
+            --disabled-password \
+            --home /usr/share/debhome\
+            --no-create-home \
+           debuser
+fi

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+chown -R debuser: /var/log/debhome
+chown -R debuser: /usr/share/debhome/conf
+update-rc.d debhome defaults

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -e /var/run/debhome/debhome.pid ]; then
+    service debhome stop
+fi

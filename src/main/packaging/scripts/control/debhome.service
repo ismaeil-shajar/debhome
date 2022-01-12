@@ -1,0 +1,11 @@
+[Unit]
+Description=debhome
+After=syslog.target
+
+[Service]
+User=debuser
+ExecStart=/usr/share/debhome/bin/debhome.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
